@@ -14,7 +14,7 @@ NEWLINE = "\n"
     # 2. Create an output file called xxx.vm and prepare it for writing.
     # 3. Use the CompilationEngine to compile the input JackTokenizer into the output file.
 
-def analyze():
+def compile():
 
     fileManager = FileManager.FileManager()
 
@@ -50,4 +50,4 @@ def analyze():
             #tree.write(sourceFilePath + "_vm.xml")
 
 
-analyze()
+compile()
