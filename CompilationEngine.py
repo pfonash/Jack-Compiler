@@ -49,12 +49,15 @@ RIGHT_BRACE_WITH_SPACE = " } "
 SEMI_COLON = ";"
 SPACE = " "
 
-# Misc. variables
+
 STATEMENTS = ["doStatement", "letStatement", "whileStatement", "returnStatement", "ifStatement"]
+
+
 OPS = ["+", "-", "*", "/", "&", "|", "<", ">", "="]
 UNARY_OPS = ["-", "~"]
 BINARY = "binary"
 UNARY = "unary"
+
 XML_EXTENSION = ".xml"
 
 class JackEngine():
@@ -435,6 +438,7 @@ class JackEngine():
         self.advanceToken()
 
         while self.currentTokenValue() == COMMA:
+
             # Compile the comma
             self.addCurrentTokenAsChildElement(parentElement = self.varDecElement)
             self.advanceToken()
@@ -1000,7 +1004,7 @@ class JackEngine():
                     self.advanceToken()
                     self.compileExpression()
 
-                    # Push varNAme
+                    # Push varName
                     self.VMWriter.writePush(kind, index)
 
                     # Add the result of the expression to the base of the variable
